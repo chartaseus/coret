@@ -6,3 +6,10 @@ for (let i = 0; i < (gridSize * gridSize); i++) {
   cell.style.cssText = `width: ${600/gridSize}px; height: ${600/gridSize}px`;
   container.appendChild(cell);
 }
+
+const cells = document.querySelectorAll(".cell");
+cells.forEach((cell) => {
+  cell.addEventListener("mouseenter", () => {
+    cell.style.backgroundColor = "black";
+  })
+});
