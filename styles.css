@@ -1,14 +1,12 @@
 .grid-container {
   border: 1px solid black;
-  width: 960px;
-  height: 960px;
+  width: 600px;
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .cell {
   border: 1px solid black;
-  width: 60px;
-  height:60px;
   box-sizing: border-box;
 }
