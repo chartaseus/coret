@@ -18,10 +18,20 @@ function createGrid(gridSize = 16) {
 }
 
 function changeGrid() {
+  let gridSize = prompt("Enter number of squares you want in a row (up to 100)");
+  if (gridSize === null) { return; } // exit function without erasing existing sketch if user clicks cancel
+  gridSize = Math.abs(parseInt(gridSize)); // convert user input to positive integer
+  
+  // exit function without erasing existing sketch if user enters invalid input
+  if (gridSize > 100 || isNaN(gridSize)) {
+    alert("Please enter a number up to 100");
+    return;
+  }
+  
   while (container.hasChildNodes()) {
     container.removeChild(container.firstChild);
   }
-  let gridSize = parseInt(prompt("Enter number of squares you want in a row (up to 100)"));
+
   createGrid(gridSize);
 }
 
