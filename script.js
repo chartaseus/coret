@@ -24,6 +24,10 @@ function createGrid(gridSize = 16) {
           cell.style.backgroundColor = `hsl(${Math.round(Math.random() * 360)}, 50%, 70%)`;
           break;
 
+        case "eraser":
+          cell.style.backgroundColor = "";
+          break;
+
         default:
           cell.style.backgroundColor = "#000000";
           break;
