@@ -1,6 +1,13 @@
 const container = document.querySelector(".grid-container");
 const changeGridButton = document.getElementById("changeSize");
 changeGridButton.addEventListener("click", changeGrid);
+let fillColor = "";
+const colorInput = document.querySelectorAll("[name=color-options]");
+colorInput.forEach((color) => {
+  color.addEventListener("click", () => {
+    fillColor = color.value;
+  })
+});
 
 function createGrid(gridSize = 16) {
   for (let i = 0; i < (gridSize * gridSize); i++) {
@@ -12,7 +19,15 @@ function createGrid(gridSize = 16) {
   const cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
     cell.addEventListener("mouseenter", () => {
-      cell.style.backgroundColor = "black";
+      switch (fillColor) {
+        case "rainbow":
+          cell.style.backgroundColor = `hsl(${Math.round(Math.random() * 360)}, 50%, 70%)`;
+          break;
+
+        default:
+          cell.style.backgroundColor = "#000000";
+          break;
+      }
     })
   });
 }
