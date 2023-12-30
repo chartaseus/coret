@@ -9,7 +9,10 @@
 </head>
 <body>
   <div class="control-panel">
-    <button type="button" id="changeSize">Change size</button>
+    <fieldset>
+      <legend>Grid size</legend>
+      <input type="range" id="gridSize" name="grid-size" min="1" max="100" value="16">
+    </fieldset>
     <fieldset>
       <legend>Color</legend>
       <input type="radio" id="defaultColor" name="color-options" value="" checked> <label for="defaultColor">Default</label>

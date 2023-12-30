@@ -1,6 +1,9 @@
 const container = document.querySelector(".grid-container");
-const changeGridButton = document.getElementById("changeSize");
-changeGridButton.addEventListener("click", changeGrid);
+
+const gridSizeSlider = document.querySelector("#gridSize");
+let gridSize = gridSizeSlider.valueAsNumber;
+gridSizeSlider.addEventListener("input", changeGrid);
+
 let fillColor = "";
 const colorInput = document.querySelectorAll("[name=color-options]");
 colorInput.forEach((color) => {
@@ -9,7 +12,7 @@ colorInput.forEach((color) => {
   })
 });
 
-function createGrid(gridSize = 16) {
+function createGrid(gridSize) {
   for (let i = 0; i < (gridSize * gridSize); i++) {
     const cell = document.createElement("div");
     cell.classList.add("cell");
@@ -37,15 +40,7 @@ function createGrid(gridSize = 16) {
 }
 
 function changeGrid() {
-  let gridSize = prompt("Enter number of squares you want in a row (up to 100)");
-  if (gridSize === null) { return; } // exit function without erasing existing sketch if user clicks cancel
-  gridSize = Math.abs(parseInt(gridSize)); // convert user input to positive integer
-  
-  // exit function without erasing existing sketch if user enters invalid input
-  if (gridSize > 100 || isNaN(gridSize)) {
-    alert("Please enter a number up to 100");
-    return;
-  }
+  gridSize = gridSizeSlider.value;
   
   while (container.hasChildNodes()) {
     container.removeChild(container.firstChild);
@@ -54,4 +49,4 @@ function changeGrid() {
   createGrid(gridSize);
 }
 
-createGrid();
+createGrid(gridSize);

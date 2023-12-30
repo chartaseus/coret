@@ -1,6 +1,8 @@
 .control-panel {
   width: 90vmin;
   margin: auto;
+  display: flex;
+  justify-content:flex-start;
 }
 
 .grid-container {
@@ -20,4 +22,5 @@
 
 fieldset {
   display: inline;
+  border-style: hidden;
 }
