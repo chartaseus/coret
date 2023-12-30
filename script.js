@@ -24,7 +24,7 @@ function createGrid(gridSize) {
     cell.addEventListener("mouseenter", () => {
       switch (fillColor) {
         case "rainbow":
-          cell.style.backgroundColor = `hsl(${Math.round(Math.random() * 360)}, 50%, 70%)`;
+          cell.style.backgroundColor = `hsl(${Math.round(Math.random() * 360)}, 35%, 55%)`;
           break;
 
         case "eraser":
@@ -32,7 +32,7 @@ function createGrid(gridSize) {
           break;
 
         default:
-          cell.style.backgroundColor = "#000000";
+          cell.style.backgroundColor = "#4d4d4d";
           break;
       }
     })
