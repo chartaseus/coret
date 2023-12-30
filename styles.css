@@ -1,13 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Inconsolata&display=swap');
+
+/* color palette: https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c */
+
+body {
+  background-color: #DDBEA9;
+  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  color:#6B705C;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'DotGothic16', 'Courier New', Courier, monospace;
+}
+
 .control-panel {
+  background-color: #6B705C;
+  box-sizing: border-box;
+  color: #FFE8D6;
   width: 90vmin;
   margin: auto;
-  display: flex;
-  justify-content:flex-start;
+  border: 5vmin solid #6B705C;
+  /* border-top-left-radius: 5%;
+  border-top-right-radius: 5%; */
+}
+
+input[type="range"] {
+  accent-color: #CB997E;
+}
+
+input[type="radio"] {
+  accent-color: #CB997E;
 }
 
 .grid-container {
-  border: 1px solid black;
-  margin:auto;
+  background-color: #B7B7A4;
+  border: 5vmin solid #6B705C;
+  /* border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%; */
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: -5vmin;
   width: 90vmin;
   height:90vmin;
   display: flex;
@@ -16,7 +48,7 @@
 }
 
 .cell {
-  border: 1px solid black;
+  border: 1px solid #6B705C;
   box-sizing: border-box;
 }
 
