@@ -20,8 +20,8 @@ h1 {
   width: 90vmin;
   margin: auto;
   border: 5vmin solid #6B705C;
-  /* border-top-left-radius: 5%;
-  border-top-right-radius: 5%; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 input[type="range"] {
@@ -35,8 +35,8 @@ input[type="radio"] {
 .grid-container {
   background-color: #B7B7A4;
   border: 5vmin solid #6B705C;
-  /* border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin-left:auto;
   margin-right: auto;
   margin-top: -5vmin;
