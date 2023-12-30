@@ -11,8 +11,9 @@
   <h1>Etch-a-Sketch</h1>
   <div class="control-panel">
     <fieldset>
-      <legend>Grid size</legend>
-      <input type="range" id="gridSize" name="grid-size" min="1" max="100" value="16">
+      <legend>Grid Density</legend>
+      <input type="range" id="gridSize" name="grid-size" min="1" max="100" value="16" oninput="sizeValue.value = value">
+      <output for="gridSize" id="sizeValue">16</output>
     </fieldset>
     <fieldset>
       <legend>Color</legend>
